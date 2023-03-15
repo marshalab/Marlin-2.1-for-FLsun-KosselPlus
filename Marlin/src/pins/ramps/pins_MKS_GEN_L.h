@@ -43,6 +43,13 @@
   #define FAN_PIN 9
 #endif
 
+// RAMPS 1.4 DIO 4 on the servos connector
+#ifndef FIL_RUNOUT_PIN
+  #define FIL_RUNOUT_PIN                       4
+#endif
+
+#define SERVO3_PIN	-1
+
 //
 // CS Pins wired to avoid conflict with the LCD
 // See https://www.thingiverse.com/asset:66604
@@ -55,5 +62,12 @@
 #ifndef Y_CS_PIN
   #define Y_CS_PIN 63
 #endif
+
+//
+// Z Probe (when not Z_MIN_PIN)
+//
+//#ifndef Z_MIN_PROBE_PIN
+  #define Z_MIN_PROBE_PIN                     18  // IND_S_5V
+//#endif
 
 #include "pins_RAMPS.h"
